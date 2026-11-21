@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Device pairing",
+    "description": "A Pairing page in Settings that shows a short-lived QR code for pairing the DSH mobile app: the code carries the SSH endpoint, the host-key SHA-256 fingerprint, the pinned DSH version, a verification code, and a one-time DSH token. The page also lists paired devices. The phone app performs the scan, the SSH connection, and the /connect exchange; the panel only serves the offer and consumes the single-use acceptance."
+  }
+}

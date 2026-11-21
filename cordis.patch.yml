@@ -1,0 +1,11 @@
+- insert:
+    - id: dsh-pairing
+      name: '@local/dsh-pairing'
+      config:
+        host: workstation.example.com
+        port: 22
+        user: ''
+        fingerprint: ''
+        hostKeyFile: /etc/ssh/ssh_host_ed25519_key.pub
+        dshVersion: ''
+        offerTtlSeconds: 120

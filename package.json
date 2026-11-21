@@ -1,0 +1,46 @@
+{
+  "name": "@local/dsh-pairing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Settings > Pairing page that shows a short-lived QR code for pairing the DSH mobile app: SSH endpoint, host-key fingerprint, pinned DSH version, one-time DSH token, verification code, and paired devices.",
+  "license": "MIT",
+  "author": "Christian Miller",
+  "homepage": "https://github.com/christianmilleriv/dsh-pairing-panel#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christianmilleriv/dsh-pairing-panel.git"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "pairing",
+    "qr-code",
+    "mobile"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "qr.cjs",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-settings"]
+    }
+  }
+}
